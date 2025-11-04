@@ -1,9 +1,11 @@
 # Sinfonia Kandinsky
 ## O escritor da música na pintura
-![Ícone do App](https://chatgpt.com/backend-api/estuary/content?id=file_0000000087d071f5aabed8f39beeaf34&ts=489502&p=fs&cid=1&sig=bb3760a35b943b2786daabef6262af7bf295f37af5a15da8990f07d23226d26c&v=0)
+![Ícone do App](./src/assets/ChatGPT%20Image%202%20de%20nov.%20de%202025,%2018_34_21.png)
+
 Sinfonia Kandinsky é um app que descreve, de forma bem simples, a música nas pinturas de Kandinsky, um renomado artista do abstracionismo que acreditava no fenômeno, chamado *sinestesia*
 ### Quem foi Kandinsky?
 ![Wassily Kandinsky](https://www.tudoquadros.pt/cdn/shop/files/foto-wassily-kandinsky-v2_1.jpg?v=1684770744)
+
 Wassily Kandinsky (1866-1944) foi um artista plástico russo, amplamente reconhecido como pioneiro da arte abstrata no século XX. Nascido em Moscou em 16 de dezembro de 1866, passou a infância em Odessa, onde teve seus primeiros contatos artísticos. Inicialmente formado em Direito pela Universidade de Moscou, Kandinsky exerceu carreira jurídica antes de dedicar-se às artes plásticas em torno dos 30 anos.
 
 Em 1896, mudou-se para Munique, Alemanha, para estudar pintura na Academia de Belas Artes, influenciado pela arte impressionista e pelo pós-impressionismo. Kandinsky fundou a associação artística Phalanx e desenvolveu sua obra focando no abstracionismo, integrando influências musicais e culturais da Rússia e do folclore bávaro. Publicou em 1911 o ensaio "Do Espiritual na Arte", que explora a arte como expressão interior.
