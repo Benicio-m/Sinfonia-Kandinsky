@@ -22,5 +22,5 @@ Em seu livro "Do Espiritual na Arte" (1914), Kandinsky expôs conceitos fundamen
 
 Assim, a sinestesia na arte, especialmente nas obras de Kandinsky, pode ser entendida como a fusão dos sentidos em uma experiência estética integradora, onde visão e audição se combinam para criar uma linguagem artística espiritual e sensorialmente rica, que transcende a mera imagem para evocar sentimentos profundos e uma percepção mais ampla da arte.
 ## Detalhes técnicos
-[![Linguagens Usadas](https://github-readme-stats.vercel.app/api/top-langs/?username=Benicio-m&layout=pie)](https://github.com/anuraghazra/github-readme-stats)
+[![Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=Benicio-m&layout=pie&custom_title=Linguagens%20usadas:)](https://github.com/anuraghazra/github-readme-stats)
 
