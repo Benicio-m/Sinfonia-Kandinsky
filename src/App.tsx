@@ -1,9 +1,9 @@
 import './App.css'
 import play from './assets/play.svg'
-import jpg from "./assets/kandinsky-composicao-viii-d.jpg"
 function App() {
+    const img = new URL("./assets/kandinsky-composicao-viii-d.jpg", import.meta.url).href
     return (
-        <div style={{backgroundImage: `url(${jpg})`,  backgroundPosition: 'center',  backgroundSize: 'cover',  backgroundRepeat: 'no-repeat'}}>
+        <div style={{backgroundImage: `url(${img})`,  backgroundPosition: 'center',  backgroundSize: 'cover',  backgroundRepeat: 'no-repeat', height: "100vh"}}>
             {/* <img src={jpg} alt="composicao" /> */}
             <button title='Play' style={{position: "absolute", left: "20.5em", top: "5.5em", backgroundColor: "#ff5e00ff", height: "3em", width: "3em"}}>
                 <img src={play} alt='play' style={{transform: "translate(-40%, -9%)"}}/>
