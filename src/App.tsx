@@ -1,4 +1,3 @@
-import React, { useEffect, useRef, useState } from 'react';
 import styles from "./App.module.css";
 import Oa from './works/oa';
 import Ob from './works/ob';

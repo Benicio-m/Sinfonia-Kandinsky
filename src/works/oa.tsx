@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import styles from "../App.module.css"
 import audio from "/Sinestesia da composição 8.mp3"
 import obra from "../assets/obra.jpg"
 export default function Oa() {
-    const audioRef = useRef(null);
+    const audioRef = useRef<HTMLAudioElement | null>(null);
     const [playing, setPlaying] = useState(false);
 
     useEffect(() => {

@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import styles from "../App.module.css"
 import audio from "/Comp vii.mp3"
 import obra from "../assets/obra3.webp"
 export default function Ob() {
-    const audioRef = useRef(null);
+    const audioRef = useRef<HTMLAudioElement | null>(null);
     const [playing, setPlaying] = useState(false);
 
     useEffect(() => {
@@ -28,7 +28,7 @@ export default function Ob() {
                     <img src={obra} alt="obra" /> 
                 </div>  
                 <audio src={audio} ref={audioRef} />
-                <button type="button" onClick={() => setPlaying(!playing)} className={styles.but}>▶</button>
+                <button onClick={() => setPlaying(!playing)} className={styles.but}>▶</button>
             </div>
         </div>
     )
