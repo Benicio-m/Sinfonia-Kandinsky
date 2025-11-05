@@ -49,7 +49,7 @@ export default function Ob() {
 
   return (
     <div className={styles.c}>
-      <h1>Composição VIII</h1>
+      <h1>Composição VII</h1>
       <div className={styles.i2} />
       <audio ref={audioRef} src={audioOb} />
       <button onClick={handlePlayClick} className={styles.but}>
