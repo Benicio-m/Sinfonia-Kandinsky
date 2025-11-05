@@ -24,7 +24,7 @@ export default function Oa() {
                 <h1>Composição VIII</h1>
             </div>
             <div className={styles.image} >
-                <div style={{height: "70vh"}}>
+                <div style={{width: "70vw"}}>
                     <img src={obra} alt="obra" />
                 </div>
                 <audio src={audio} ref={audioRef} />
