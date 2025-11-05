@@ -1,16 +1,28 @@
 import { useEffect, useRef, useState } from "react"
 import styles from "../App.module.css"
 import audio from "/Sinestesia da composição 8.mp3"
-import obra from "../assets/obra.jpg"
+
 export default function Oa() {
     const audioRef = useRef<HTMLAudioElement | null>(null);
     const [playing, setPlaying] = useState(false);
 
+    const isOtherAudioPlaying = () => {
+        const audios = document.querySelectorAll('audio');
+        return Array.from(audios).some(audio => !audio.paused);
+    };
+
     useEffect(() => {
-        if (playing && audioRef.current) {
-            audioRef.current.play();
-        } else if (audioRef.current) {
-            audioRef.current.pause();
+        if (audioRef.current) {
+            if (playing) {
+            // Play only if no other audio is playing or if this audio is already playing
+            if (!isOtherAudioPlaying() || !audioRef.current.paused) {
+                audioRef.current.play();
+            } else {
+                audioRef.current.pause();
+            }
+            } else {
+                audioRef.current.pause();
+            }
         }
         return () => {
             if (audioRef.current) {
@@ -24,9 +36,7 @@ export default function Oa() {
                 <h1>Composição VIII</h1>
             </div>
             <div className={styles.image} >
-                <div className={styles.i1}>
-                    <img src={obra} alt="obra"/>
-                </div>
+                <div className={styles.i1} />
                 <audio src={audio} ref={audioRef} />
                 <button onClick={() => setPlaying(!playing)} className={styles.but}>▶</button>
             </div>
