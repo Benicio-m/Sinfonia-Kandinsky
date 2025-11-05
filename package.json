@@ -3,10 +3,10 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://Benicio-m.github.io/Sinfonia-Kandinsky", 
-    "scripts": { 
-        "predeploy": "npm run build", 
-        "deploy": "gh-pages -d dist", 
+  "homepage": "https://benicio-m.github.io/Sinfonia-Kandinsky/",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
@@ -14,7 +14,8 @@
   },
   "dependencies": {
     "react": "^19.1.1",
-    "react-dom": "^19.1.1"
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.9.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
