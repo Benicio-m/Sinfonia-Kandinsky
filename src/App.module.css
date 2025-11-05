@@ -84,3 +84,6 @@ h1 {
   flex-direction: column;
   gap: 0px;
 }
+.i1 {
+  height: 80vh;
+}
