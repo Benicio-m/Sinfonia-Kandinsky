@@ -1,0 +1,88 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+@media screen and (orientation: portrait) and (orientation: landscape) {
+  .hor {
+    width: 100vw;
+    box-shadow: 5px 5px 6px 3px #000;
+    text-align: center;
+  }
+  .image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: -1;
+  }
+  .but {
+    color: rgb(0, 191, 255);
+    width: 100vw;
+  }
+  h1 {
+    text-align: center;
+    height: 90px;
+  }
+  .b {
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+    gap: 32px;
+    width: auto;
+  }
+  ::-webkit-scrollbar {
+    background-color: #383838;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: gray;
+    border-radius: 5px;
+  }
+  .c {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+  }
+}
+.hor {
+  width: 100vw;
+  box-shadow: 5px 5px 6px 3px #000;
+  text-align: center;
+}
+.image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  z-index: -1;
+}
+.but {
+  color: rgb(0, 191, 255);
+  width: 100vw;
+}
+h1 {
+  text-align: center;
+  height: 90px;
+}
+.b {
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+  gap: 32px;
+  width: auto;
+}
+::-webkit-scrollbar {
+  background-color: #383838;
+}
+::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 5px;
+}
+.c {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+}
