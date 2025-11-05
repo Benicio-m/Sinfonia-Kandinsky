@@ -25,7 +25,7 @@ export default function Ob() {
             </div>
             <div className={styles.image}>
                 <div className={styles.i1}>
-                    <img src={obra} alt="obra" /> 
+                    <img src={obra} alt="obra"  style={{height: "70vh"}}/> 
                 </div>  
                 <audio src={audio} ref={audioRef} />
                 <button onClick={() => setPlaying(!playing)} className={styles.but}>▶</button>
