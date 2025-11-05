@@ -1,6 +1,6 @@
 # Sinfonia Kandinsky
 ## O escritor da música na pintura
-![Ícone do App](./src/assets/ChatGPT%20Image%202%20de%20nov.%20de%202025,%2018_34_21.png)
+![Ícone do App](./src/assets/ico.png)
 
 Sinfonia Kandinsky é um app que descreve, de forma bem simples, a música nas pinturas de Kandinsky, um renomado artista do abstracionismo que acreditava no fenômeno, chamado *sinestesia*
 ### Quem foi Kandinsky?

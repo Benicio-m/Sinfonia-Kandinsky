@@ -1,45 +1,64 @@
-import { useEffect, useRef, useState } from "react"
-import styles from "../App.module.css"
-import audio from "/Comp vii.mp3"
-
+import { useEffect, useRef, useState } from "react";
+import styles from "../App.module.css";
+import audioOb from "/Comp vii.mp3";
+import { useAudioGlobal } from "../vars";
 export default function Ob() {
-    const audioRef = useRef<HTMLAudioElement | null>(null);
-    const [playing, setPlaying] = useState(false);
+  const id = "ob"; // unique string for this component
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [playing, setPlaying] = useState(false);
+  const { playingId, setPlayingId } = useAudioGlobal();
 
-    const isOtherAudioPlaying = () => {
-        const audios = document.querySelectorAll('audio');
-        return Array.from(audios).some(audio => !audio.paused);
+  function handlePlayClick() {
+    if (!audioRef.current) return;
+    if (!playingId || playingId === id) {
+      // allow play or pause this
+      if (playing) {
+        audioRef.current.pause();
+        setPlaying(false);
+        setPlayingId(null);
+      } else {
+        audioRef.current.play();
+        setPlaying(true);
+        setPlayingId(id);
+      }
+    }
+    // else: do nothing, some other audio is playing
+  }
+
+  // Sync play state when global changes (pause if another starts)
+  useEffect(() => {
+    if (playingId !== id && playing) {
+      audioRef.current?.pause();
+      setPlaying(false);
+    }
+  }, [playingId, playing]);
+
+  // Clean up state when audio ends
+  useEffect(() => {
+    const audioEl = audioRef.current;
+    if (!audioEl) return;
+    const onEnded = () => {
+      setPlaying(false);
+      setPlayingId(null);
     };
+    audioEl.addEventListener("ended", onEnded);
+    return () => {
+      audioEl.removeEventListener("ended", onEnded);
+    };
+  }, [setPlayingId]);
 
-    useEffect(() => {
-        if (audioRef.current) {
-            if (playing) {
-            // Play only if no other audio is playing or if this audio is already playing
-            if (!isOtherAudioPlaying() || !audioRef.current.paused) {
-                audioRef.current.play();
-            } else {
-                audioRef.current.pause();
-            }
-            } else {
-                audioRef.current.pause();
-            }
-        }
-        return () => {
-            if (audioRef.current) {
-                audioRef.current.pause();
-            }
-        };
-    }, [playing]);
-    return(
-        <div className={styles.c}>
-            <div className={styles.hor}>
-                <h1>Composição VII</h1>
-            </div>
-            <div className={styles.image}>
-                <div className={styles.i2} />  
-                <audio src={audio}/>
-                <button onClick={() => setPlaying(!playing)} className={styles.but}>▶</button>
-            </div>
-        </div>
-    )
+  return (
+    <div className={styles.c}>
+      <h1>Composição VIII</h1>
+      <div className={styles.i2} />
+      <audio ref={audioRef} src={audioOb} />
+      <button onClick={handlePlayClick} className={styles.but}>
+        {playing ? "❚❚" : "▶"}
+      </button>
+      {playingId && playingId !== id && (
+        <div className={styles.locked}>Outro áudio está em execução</div>
+      )}
+    </div>
+  );
 }
+
