@@ -4,7 +4,55 @@
   padding: 2rem;
   text-align: center;
 }
-@media screen and (orientation: portrait) and (orientation: landscape) {
+@media screen and (orientation: landscape) {
+  .but {
+  color: rgb(0, 191, 255);
+  width: 100vw;
+}
+h1 {
+  text-align: center;
+  height: 100px;
+  width: 100%;
+  box-shadow: 0 0 10px 5px #000;
+}
+::-webkit-scrollbar {
+  background-color: #383838;
+}
+::-webkit-scrollbar-thumb {
+  background-color: gray;
+  border-radius: 5px;
+}
+.c {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0px;
+}
+.i1, .i2 {
+  z-index: -1;
+  display: flex;
+  height: 150vh;
+  width: 90vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.i1 {
+  background-image: url("./assets/obra.jpg");
+}
+.i2 {
+  background-image: url("./assets/obra3.webp");  
+}
+.locked {
+  background-color: #444;
+  z-index: -1;
+}
+button {
+  box-shadow: 0 0 10px 5px #000;
+}
+}
+@media screen and (orientation: portrait) {
   .but {
     color: rgb(0, 191, 255);
     width: 100vw;
