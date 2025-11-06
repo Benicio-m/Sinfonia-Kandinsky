@@ -78,7 +78,7 @@ button {
   .i1, .i2 {
     z-index: -1;
     display: flex;
-    height: auto;
+    height: 50vh;
     width: 100vw;
     background-position: center;
     background-repeat: no-repeat;
